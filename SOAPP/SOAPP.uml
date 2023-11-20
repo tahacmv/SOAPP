@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_OHGegIfYEe6iiO7UireY6g" name="SOAPP">
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_OHGegIfYEe6iiO7UireY6g" name="SOAPP">
   <packageImport xmi:type="uml:PackageImport" xmi:id="_OLOwkIfYEe6iiO7UireY6g">
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
   </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_cGZ4sIfdEe64_LwofEa-9Q" name="UseCaseDiagram">
+    <packagedElement xmi:type="uml:Actor" xmi:id="_hMOjAIfdEe64_LwofEa-9Q" name="Camera"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_k2qNYIfdEe64_LwofEa-9Q" name="Envoyer Signal"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_meP2QIfdEe64_LwofEa-9Q" name="Detecter presence du wagon"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_tZ_gYIfdEe64_LwofEa-9Q" name="Identifier wagon"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_xe-YwIfdEe64_LwofEa-9Q" memberEnd="_xfA1AIfdEe64_LwofEa-9Q _xfCDIIfdEe64_LwofEa-9Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_xfAN8IfdEe64_LwofEa-9Q" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xfAN8YfdEe64_LwofEa-9Q" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_xfA1AIfdEe64_LwofEa-9Q" name="envoyer signal" type="_k2qNYIfdEe64_LwofEa-9Q" association="_xe-YwIfdEe64_LwofEa-9Q"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_xfCDIIfdEe64_LwofEa-9Q" name="camera" type="_hMOjAIfdEe64_LwofEa-9Q" association="_xe-YwIfdEe64_LwofEa-9Q"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_6-DiUIfdEe64_LwofEa-9Q" name="&lt;&lt;include>>" client="_k2qNYIfdEe64_LwofEa-9Q" supplier="_meP2QIfdEe64_LwofEa-9Q"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_CFrsUIfeEe64_LwofEa-9Q" name="&lt;&lt;include>>" client="_k2qNYIfdEe64_LwofEa-9Q" supplier="_tZ_gYIfdEe64_LwofEa-9Q"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_FIvNoIfeEe64_LwofEa-9Q" name="&lt;&lt;include>>" client="_tZ_gYIfdEe64_LwofEa-9Q" supplier="_meP2QIfdEe64_LwofEa-9Q"/>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_tNrGMIfeEe64_LwofEa-9Q" name="Train"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_3whZ4IfeEe64_LwofEa-9Q" name="&lt;&lt;secondary>>" memberEnd="_3wioAYfeEe64_LwofEa-9Q _3wioAofeEe64_LwofEa-9Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3wiA8IfeEe64_LwofEa-9Q" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3wioAIfeEe64_LwofEa-9Q" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_3wioAYfeEe64_LwofEa-9Q" name="train" type="_tNrGMIfeEe64_LwofEa-9Q" association="_3whZ4IfeEe64_LwofEa-9Q"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_3wioAofeEe64_LwofEa-9Q" name="detecter presence du wagon" type="_meP2QIfdEe64_LwofEa-9Q" association="_3whZ4IfeEe64_LwofEa-9Q"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_6tWXYIfeEe64_LwofEa-9Q" name="&lt;&lt;secondary>>" memberEnd="_6tW-cofeEe64_LwofEa-9Q _6tW-c4feEe64_LwofEa-9Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6tW-cIfeEe64_LwofEa-9Q" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6tW-cYfeEe64_LwofEa-9Q" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_6tW-cofeEe64_LwofEa-9Q" name="train" type="_tNrGMIfeEe64_LwofEa-9Q" association="_6tWXYIfeEe64_LwofEa-9Q"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_6tW-c4feEe64_LwofEa-9Q" name="identifier wagon" type="_tZ_gYIfdEe64_LwofEa-9Q" association="_6tWXYIfeEe64_LwofEa-9Q"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_qOa_cIfhEe64_LwofEa-9Q" name="SCC"/>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_rwIp0IfhEe64_LwofEa-9Q" name=" Portes palières"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_1rNy4IfhEe64_LwofEa-9Q" name="Ouvrir les portes"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_4uv1UIfhEe64_LwofEa-9Q" memberEnd="_4uxDcIfhEe64_LwofEa-9Q _4uxDcYfhEe64_LwofEa-9Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_4uwcYIfhEe64_LwofEa-9Q" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_4uwcYYfhEe64_LwofEa-9Q" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_4uxDcIfhEe64_LwofEa-9Q" name="ouvrir les portes" type="_1rNy4IfhEe64_LwofEa-9Q" association="_4uv1UIfhEe64_LwofEa-9Q"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_4uxDcYfhEe64_LwofEa-9Q" name="scc" type="_qOa_cIfhEe64_LwofEa-9Q" association="_4uv1UIfhEe64_LwofEa-9Q"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_6rUPsIfhEe64_LwofEa-9Q" name="&lt;&lt;secondary>>" memberEnd="_6rVd0YfhEe64_LwofEa-9Q _6rVd0ofhEe64_LwofEa-9Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6rU2wIfhEe64_LwofEa-9Q" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6rVd0IfhEe64_LwofEa-9Q" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_6rVd0YfhEe64_LwofEa-9Q" name="ouvrir les portes" type="_1rNy4IfhEe64_LwofEa-9Q" association="_6rUPsIfhEe64_LwofEa-9Q"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_6rVd0ofhEe64_LwofEa-9Q" name=" portes palières" type="_rwIp0IfhEe64_LwofEa-9Q" association="_6rUPsIfhEe64_LwofEa-9Q"/>
+    </packagedElement>
+  </packagedElement>
 </uml:Model>
