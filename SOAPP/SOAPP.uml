@@ -53,36 +53,69 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_LtOCwIfoEe6u9b2Nf5PmMg" name="System Environment">
     <packagedElement xmi:type="uml:Component" xmi:id="_SYjSUIfoEe6u9b2Nf5PmMg" name="SOAPP">
-      <ownedAttribute xmi:type="uml:Port" xmi:id="_UGxHoIfoEe6u9b2Nf5PmMg" name="IN1" aggregation="composite"/>
-      <ownedAttribute xmi:type="uml:Port" xmi:id="_XD61QIfoEe6u9b2Nf5PmMg" name="IN2" aggregation="composite"/>
-      <ownedAttribute xmi:type="uml:Port" xmi:id="_Zjl8sIfoEe6u9b2Nf5PmMg" name="IN3" aggregation="composite"/>
-      <ownedAttribute xmi:type="uml:Port" xmi:id="_2l3RsIfrEe6u9b2Nf5PmMg" name="OUT1" aggregation="composite"/>
-      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_gGYCUIfqEe6u9b2Nf5PmMg" client="_SYjSUIfoEe6u9b2Nf5PmMg _UGxHoIfoEe6u9b2Nf5PmMg" supplier="_nQOr0IfoEe6u9b2Nf5PmMg" contract="_nQOr0IfoEe6u9b2Nf5PmMg"/>
-      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_hSiTcIfqEe6u9b2Nf5PmMg" client="_SYjSUIfoEe6u9b2Nf5PmMg" supplier="_pngFMIfoEe6u9b2Nf5PmMg" contract="_pngFMIfoEe6u9b2Nf5PmMg"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_UGxHoIfoEe6u9b2Nf5PmMg" name="INSOAPP1" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_XD61QIfoEe6u9b2Nf5PmMg" name="INSOAPP2" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_Zjl8sIfoEe6u9b2Nf5PmMg" name="INSOAPP3" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_2l3RsIfrEe6u9b2Nf5PmMg" name="OUTSOAPP" aggregation="composite"/>
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_gGYCUIfqEe6u9b2Nf5PmMg" client="_SYjSUIfoEe6u9b2Nf5PmMg _XD61QIfoEe6u9b2Nf5PmMg" supplier="_nQOr0IfoEe6u9b2Nf5PmMg" contract="_nQOr0IfoEe6u9b2Nf5PmMg"/>
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_hSiTcIfqEe6u9b2Nf5PmMg" client="_SYjSUIfoEe6u9b2Nf5PmMg _Zjl8sIfoEe6u9b2Nf5PmMg" supplier="_pngFMIfoEe6u9b2Nf5PmMg" contract="_pngFMIfoEe6u9b2Nf5PmMg"/>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_Yhx2QImcEe6hX4xFo692zw" client="_SYjSUIfoEe6u9b2Nf5PmMg" supplier="_Ukm2EImcEe6hX4xFo692zw" contract="_Ukm2EImcEe6hX4xFo692zw"/>
       <packagedElement xmi:type="uml:Usage" xmi:id="_ycM4MIfsEe6u9b2Nf5PmMg" client="_SYjSUIfoEe6u9b2Nf5PmMg _2l3RsIfrEe6u9b2Nf5PmMg" supplier="_ulQb0IfsEe6u9b2Nf5PmMg"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Interface" xmi:id="_nQOr0IfoEe6u9b2Nf5PmMg" name="SignalDroit">
-      <generalization xmi:type="uml:Generalization" xmi:id="_1dfXkIfvEe6u9b2Nf5PmMg" general="_sFSSEIfvEe6u9b2Nf5PmMg"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_nQOr0IfoEe6u9b2Nf5PmMg" name="RightSignal">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_ENmK8IoWEe6qa9hkUu_kqA" name="rightWagonIdentified"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_FshnEIoWEe6qa9hkUu_kqA" name="noRightWagonIdentified"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_pngFMIfoEe6u9b2Nf5PmMg" name="SignalCentre">
-      <generalization xmi:type="uml:Generalization" xmi:id="_2QFSIIfvEe6u9b2Nf5PmMg" general="_sFSSEIfvEe6u9b2Nf5PmMg"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_L2MUAIoWEe6qa9hkUu_kqA" name="centrerWagonIdentified"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Nw9XkIoWEe6qa9hkUu_kqA" name="noCenterWagonIdentified"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_ulQb0IfsEe6u9b2Nf5PmMg" name="DoorController">
       <ownedOperation xmi:type="uml:Operation" xmi:id="_7NiyAIfsEe6u9b2Nf5PmMg" name="openDoors"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_8mDdEIfsEe6u9b2Nf5PmMg" name="closeDoors"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Interface" xmi:id="_sFSSEIfvEe6u9b2Nf5PmMg" name="Signal">
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_3qFyAIfvEe6u9b2Nf5PmMg" name="presence"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_4mM08IfvEe6u9b2Nf5PmMg" name="abscence"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_5oVnYIfvEe6u9b2Nf5PmMg" name="arret"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Interface" xmi:id="_Ukm2EImcEe6hX4xFo692zw" name="SignalGauche">
-      <generalization xmi:type="uml:Generalization" xmi:id="_XyDpgImcEe6hX4xFo692zw" general="_sFSSEIfvEe6u9b2Nf5PmMg"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_Ukm2EImcEe6hX4xFo692zw" name="LeftSignal">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_1NlFMIoREe6qa9hkUu_kqA" name="leftWagonIdentified"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_CP02sIoWEe6qa9hkUu_kqA" name="noLeftWagonIdentified"/>
     </packagedElement>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_CNx6cIl1Ee6NUN9Wo2pcoA" name="System Architecture">
-    <packagedElement xmi:type="uml:Component" xmi:id="_kLtxAImgEe6hX4xFo692zw" name="Portes Palières"/>
+    <packagedElement xmi:type="uml:Component" xmi:id="_kLtxAImgEe6hX4xFo692zw" name="door">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_8xWw8IoXEe6qa9hkUu_kqA" name="INDOOR" aggregation="composite"/>
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_CKQvUIoYEe6qa9hkUu_kqA" client="_kLtxAImgEe6hX4xFo692zw _8xWw8IoXEe6qa9hkUu_kqA" supplier="_ulQb0IfsEe6u9b2Nf5PmMg" contract="_ulQb0IfsEe6u9b2Nf5PmMg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Component" xmi:id="_eH4X8InwEe6edOyxPj4Nzw" name="LeftCam">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_gdHxAInwEe6edOyxPj4Nzw" name="OUTLCAM" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_rvQzoInwEe6edOyxPj4Nzw" name="INLCAM" aggregation="composite"/>
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_VBVDUIoVEe6qa9hkUu_kqA" client="_eH4X8InwEe6edOyxPj4Nzw _rvQzoInwEe6edOyxPj4Nzw" supplier="_1rqzkIoKEe6qa9hkUu_kqA" contract="_1rqzkIoKEe6qa9hkUu_kqA"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_UguJEInzEe6edOyxPj4Nzw" client="_eH4X8InwEe6edOyxPj4Nzw _gdHxAInwEe6edOyxPj4Nzw" supplier="_Ukm2EImcEe6hX4xFo692zw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Component" xmi:id="_0qDScInyEe6edOyxPj4Nzw" name="RightCam">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_V6_usInzEe6edOyxPj4Nzw" name="OUTRCAM" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_XzW-gInzEe6edOyxPj4Nzw" name="INRCAM" aggregation="composite"/>
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_lfeQwIoVEe6qa9hkUu_kqA" client="_0qDScInyEe6edOyxPj4Nzw _XzW-gInzEe6edOyxPj4Nzw" supplier="_edxvoIoVEe6qa9hkUu_kqA" contract="_edxvoIoVEe6qa9hkUu_kqA"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_2KrTgIn5Ee6355pFSNnm9A" client="_0qDScInyEe6edOyxPj4Nzw _V6_usInzEe6edOyxPj4Nzw" supplier="_nQOr0IfoEe6u9b2Nf5PmMg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Component" xmi:id="_35pIAIn_Ee6355pFSNnm9A" name="CenterCam">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_6cdDAIn_Ee6355pFSNnm9A" name="OUTCCAM" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_8SVmkIn_Ee6355pFSNnm9A" name="INCCAM" aggregation="composite"/>
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_9ErAcIoVEe6qa9hkUu_kqA" client="_35pIAIn_Ee6355pFSNnm9A _8SVmkIn_Ee6355pFSNnm9A" supplier="_1lXWQIoVEe6qa9hkUu_kqA" contract="_1lXWQIoVEe6qa9hkUu_kqA"/>
+      <packagedElement xmi:type="uml:Usage" xmi:id="_OBjaUIoAEe6355pFSNnm9A" client="_35pIAIn_Ee6355pFSNnm9A _6cdDAIn_Ee6355pFSNnm9A" supplier="_pngFMIfoEe6u9b2Nf5PmMg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_1rqzkIoKEe6qa9hkUu_kqA" name="LeftCamSensor">
+      <generalization xmi:type="uml:Generalization" xmi:id="_oFkeYIoXEe6qa9hkUu_kqA" general="_QnOkoIoXEe6qa9hkUu_kqA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_edxvoIoVEe6qa9hkUu_kqA" name="RightCamSensor">
+      <generalization xmi:type="uml:Generalization" xmi:id="_yUja4IoXEe6qa9hkUu_kqA" general="_QnOkoIoXEe6qa9hkUu_kqA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_1lXWQIoVEe6qa9hkUu_kqA" name="CenterCamSensor">
+      <generalization xmi:type="uml:Generalization" xmi:id="_zQDZ0IoXEe6qa9hkUu_kqA" general="_QnOkoIoXEe6qa9hkUu_kqA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_QnOkoIoXEe6qa9hkUu_kqA" name="CamSensor">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_0FRxoIoXEe6qa9hkUu_kqA" name="trainWagonDetected"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_1rSGIIoXEe6qa9hkUu_kqA" name="noTrainWagonDetected"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_3wbNsIoXEe6qa9hkUu_kqA" name="trainWagonStopped"/>
+    </packagedElement>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_VnidQImdEe6hX4xFo692zw" name="ClassDiagram">
     <packagedElement xmi:type="uml:Class" xmi:id="_Y5DRUImdEe6hX4xFo692zw" name="SOAPP">
