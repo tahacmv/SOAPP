@@ -52,7 +52,7 @@
     </packagedElement>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_LtOCwIfoEe6u9b2Nf5PmMg" name="System Environment">
-    <packagedElement xmi:type="uml:Component" xmi:id="_SYjSUIfoEe6u9b2Nf5PmMg" name="SOAPP">
+    <packagedElement xmi:type="uml:Component" xmi:id="_SYjSUIfoEe6u9b2Nf5PmMg" name="SOAPP" classifierBehavior="_e0KmUIuJEe65455vmAZHMw">
       <ownedAttribute xmi:type="uml:Port" xmi:id="_UGxHoIfoEe6u9b2Nf5PmMg" name="INSOAPP1" aggregation="composite"/>
       <ownedAttribute xmi:type="uml:Port" xmi:id="_XD61QIfoEe6u9b2Nf5PmMg" name="INSOAPP2" aggregation="composite"/>
       <ownedAttribute xmi:type="uml:Port" xmi:id="_Zjl8sIfoEe6u9b2Nf5PmMg" name="INSOAPP3" aggregation="composite"/>
@@ -60,7 +60,64 @@
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_gGYCUIfqEe6u9b2Nf5PmMg" client="_SYjSUIfoEe6u9b2Nf5PmMg _XD61QIfoEe6u9b2Nf5PmMg" supplier="_nQOr0IfoEe6u9b2Nf5PmMg" contract="_nQOr0IfoEe6u9b2Nf5PmMg"/>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_hSiTcIfqEe6u9b2Nf5PmMg" client="_SYjSUIfoEe6u9b2Nf5PmMg _Zjl8sIfoEe6u9b2Nf5PmMg" supplier="_pngFMIfoEe6u9b2Nf5PmMg" contract="_pngFMIfoEe6u9b2Nf5PmMg"/>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_Yhx2QImcEe6hX4xFo692zw" client="_SYjSUIfoEe6u9b2Nf5PmMg" supplier="_Ukm2EImcEe6hX4xFo692zw" contract="_Ukm2EImcEe6hX4xFo692zw"/>
+      <ownedBehavior xmi:type="uml:Activity" xmi:id="_e0KmUIuJEe65455vmAZHMw" name="Activity10"/>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_h66U0IuJEe65455vmAZHMw" name="SOAPPStateMachine">
+        <region xmi:type="uml:Region" xmi:id="_iY5RUIuJEe65455vmAZHMw" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_iUFeQIuTEe65455vmAZHMw" source="_qxkaMIuOEe65455vmAZHMw" target="_oqiYEIuVEe65455vmAZHMw">
+            <trigger xmi:type="uml:Trigger" xmi:id="_m1xO0IuVEe65455vmAZHMw" name="openDoors" event="_VTW-cIuJEe65455vmAZHMw" port="_2l3RsIfrEe6u9b2Nf5PmMg"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_rU6ToIuVEe65455vmAZHMw" source="_oqiYEIuVEe65455vmAZHMw" target="_hvvbEIuTEe65455vmAZHMw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_m3yyoIuWEe65455vmAZHMw" source="_nFxIwIuMEe65455vmAZHMw" target="_H0FqAIuWEe65455vmAZHMw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_n-Kk0IuWEe65455vmAZHMw" source="_nbaooIuMEe65455vmAZHMw" target="_H0FqAIuWEe65455vmAZHMw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_omr9YIuWEe65455vmAZHMw" source="_nxK2MIuMEe65455vmAZHMw" target="_H0FqAIuWEe65455vmAZHMw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_vPEmoIuWEe65455vmAZHMw" source="_DPwuwIuMEe65455vmAZHMw" target="_swhgkIuWEe65455vmAZHMw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_n9s1UIuXEe65455vmAZHMw" source="_H0FqAIuWEe65455vmAZHMw" target="_qxkaMIuOEe65455vmAZHMw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_FXaE0IuZEe65455vmAZHMw" source="_swhgkIuWEe65455vmAZHMw" target="_-TiZcIuYEe65455vmAZHMw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_F5xyEIuZEe65455vmAZHMw" source="_swhgkIuWEe65455vmAZHMw" target="__QuacIuYEe65455vmAZHMw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_GyBBoIuZEe65455vmAZHMw" source="_swhgkIuWEe65455vmAZHMw" target="_DytX4IuZEe65455vmAZHMw"/>
+          <transition xmi:type="uml:Transition" xmi:id="_JvffYIuZEe65455vmAZHMw" source="_-TiZcIuYEe65455vmAZHMw" target="_zO5ZkIuTEe65455vmAZHMw">
+            <trigger xmi:type="uml:Trigger" xmi:id="_Te6yEIuZEe65455vmAZHMw" event="_tgHT0It9Ee65455vmAZHMw"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_KYbusIuZEe65455vmAZHMw" source="__QuacIuYEe65455vmAZHMw" target="_zO5ZkIuTEe65455vmAZHMw">
+            <trigger xmi:type="uml:Trigger" xmi:id="_ZM96AIuZEe65455vmAZHMw" event="_5UKUMIt-Ee65455vmAZHMw" port="_XD61QIfoEe6u9b2Nf5PmMg"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_LA0kYIuZEe65455vmAZHMw" source="_DytX4IuZEe65455vmAZHMw" target="_zO5ZkIuTEe65455vmAZHMw">
+            <trigger xmi:type="uml:Trigger" xmi:id="_lUBLYIuZEe65455vmAZHMw" event="_j6RKMIuZEe65455vmAZHMw" port="_Zjl8sIfoEe6u9b2Nf5PmMg"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_pWh-kIuZEe65455vmAZHMw" source="_-TiZcIuYEe65455vmAZHMw" target="_nFxIwIuMEe65455vmAZHMw">
+            <trigger xmi:type="uml:Trigger" xmi:id="_8JRE0IuZEe65455vmAZHMw" event="_ngbpUIt9Ee65455vmAZHMw" port="_UGxHoIfoEe6u9b2Nf5PmMg"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_p8d9MIuZEe65455vmAZHMw" source="__QuacIuYEe65455vmAZHMw" target="_nbaooIuMEe65455vmAZHMw">
+            <trigger xmi:type="uml:Trigger" xmi:id="_AHX5IIuaEe65455vmAZHMw" event="_RUNCQIt-Ee65455vmAZHMw" port="_XD61QIfoEe6u9b2Nf5PmMg"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_qdowkIuZEe65455vmAZHMw" source="_DytX4IuZEe65455vmAZHMw" target="_nxK2MIuMEe65455vmAZHMw">
+            <trigger xmi:type="uml:Trigger" xmi:id="_FtkFkIuaEe65455vmAZHMw" event="_iie44IuOEe65455vmAZHMw" port="_Zjl8sIfoEe6u9b2Nf5PmMg"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_K50vEIuaEe65455vmAZHMw" source="_zO5ZkIuTEe65455vmAZHMw" target="_HFsWIIuaEe65455vmAZHMw">
+            <trigger xmi:type="uml:Trigger" xmi:id="_OU5HwIuaEe65455vmAZHMw" event="_a0BxsIuJEe65455vmAZHMw" port="_2l3RsIfrEe6u9b2Nf5PmMg"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_O2uCcIuaEe65455vmAZHMw" source="_HFsWIIuaEe65455vmAZHMw" target="_hvvbEIuTEe65455vmAZHMw"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_DPwuwIuMEe65455vmAZHMw" name="Initial1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_nFxIwIuMEe65455vmAZHMw" name="LeftWagonIdentified"/>
+          <subvertex xmi:type="uml:State" xmi:id="_nbaooIuMEe65455vmAZHMw" name="RightWagonIdentified"/>
+          <subvertex xmi:type="uml:State" xmi:id="_nxK2MIuMEe65455vmAZHMw" name="CentralWagonIdentified"/>
+          <subvertex xmi:type="uml:State" xmi:id="_qxkaMIuOEe65455vmAZHMw" name="AllWagonsIdentified"/>
+          <subvertex xmi:type="uml:FinalState" xmi:id="_hvvbEIuTEe65455vmAZHMw" name="FinalState12"/>
+          <subvertex xmi:type="uml:State" xmi:id="_zO5ZkIuTEe65455vmAZHMw" name="CloseDoors"/>
+          <subvertex xmi:type="uml:State" xmi:id="_oqiYEIuVEe65455vmAZHMw" name="openDoors"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_H0FqAIuWEe65455vmAZHMw" name="Join14" kind="join"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_swhgkIuWEe65455vmAZHMw" name="Fork15" kind="fork"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_-TiZcIuYEe65455vmAZHMw" kind="choice"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="__QuacIuYEe65455vmAZHMw" kind="choice"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_DytX4IuZEe65455vmAZHMw" kind="choice"/>
+          <subvertex xmi:type="uml:State" xmi:id="_HFsWIIuaEe65455vmAZHMw" name="closeDoors"/>
+        </region>
+      </ownedBehavior>
       <packagedElement xmi:type="uml:Usage" xmi:id="_ycM4MIfsEe6u9b2Nf5PmMg" client="_SYjSUIfoEe6u9b2Nf5PmMg _2l3RsIfrEe6u9b2Nf5PmMg" supplier="_ulQb0IfsEe6u9b2Nf5PmMg"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_ds_i4IuJEe65455vmAZHMw" name="callEvents">
+        <packagedElement xmi:type="uml:CallEvent" xmi:id="_iie44IuOEe65455vmAZHMw" name="centralWagonIdentified" operation="_L2MUAIoWEe6qa9hkUu_kqA"/>
+        <packagedElement xmi:type="uml:CallEvent" xmi:id="_j6RKMIuZEe65455vmAZHMw" name="noCentralWagonIdentified" operation="_Nw9XkIoWEe6qa9hkUu_kqA"/>
+      </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_nQOr0IfoEe6u9b2Nf5PmMg" name="RightSignal">
       <ownedOperation xmi:type="uml:Operation" xmi:id="_ENmK8IoWEe6qa9hkUu_kqA" name="rightWagonIdentified"/>
@@ -80,21 +137,177 @@
     </packagedElement>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_CNx6cIl1Ee6NUN9Wo2pcoA" name="System Architecture">
-    <packagedElement xmi:type="uml:Component" xmi:id="_kLtxAImgEe6hX4xFo692zw" name="door">
+    <packagedElement xmi:type="uml:Component" xmi:id="_kLtxAImgEe6hX4xFo692zw" name="door" classifierBehavior="_FZ2vIIuJEe65455vmAZHMw">
       <ownedAttribute xmi:type="uml:Port" xmi:id="_8xWw8IoXEe6qa9hkUu_kqA" name="INDOOR" aggregation="composite"/>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_CKQvUIoYEe6qa9hkUu_kqA" client="_kLtxAImgEe6hX4xFo692zw _8xWw8IoXEe6qa9hkUu_kqA" supplier="_ulQb0IfsEe6u9b2Nf5PmMg" contract="_ulQb0IfsEe6u9b2Nf5PmMg"/>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_FZ2vIIuJEe65455vmAZHMw" name="DoorStateMachine">
+        <region xmi:type="uml:Region" xmi:id="_GntCUIuJEe65455vmAZHMw" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_LJ2-4IuJEe65455vmAZHMw" source="_JDpgUIuJEe65455vmAZHMw" target="_JfoRsIuJEe65455vmAZHMw">
+            <trigger xmi:type="uml:Trigger" xmi:id="_WOGIYIuJEe65455vmAZHMw" name="OpenDoors" event="_VTW-cIuJEe65455vmAZHMw" port="_8xWw8IoXEe6qa9hkUu_kqA"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_LvEkwIuJEe65455vmAZHMw" source="_JfoRsIuJEe65455vmAZHMw" target="_JDpgUIuJEe65455vmAZHMw">
+            <trigger xmi:type="uml:Trigger" xmi:id="_bobDEIuJEe65455vmAZHMw" name="CloseDoors" event="_a0BxsIuJEe65455vmAZHMw" port="_8xWw8IoXEe6qa9hkUu_kqA"/>
+          </transition>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_JDpgUIuJEe65455vmAZHMw" name="Initial1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_JfoRsIuJEe65455vmAZHMw" name="DoorsOpen"/>
+        </region>
+      </ownedBehavior>
+      <packagedElement xmi:type="uml:Package" xmi:id="_QMo8QIuJEe65455vmAZHMw" name="callEvents">
+        <packagedElement xmi:type="uml:CallEvent" xmi:id="_VTW-cIuJEe65455vmAZHMw" name="OpenDoors" operation="_7NiyAIfsEe6u9b2Nf5PmMg"/>
+        <packagedElement xmi:type="uml:CallEvent" xmi:id="_a0BxsIuJEe65455vmAZHMw" name="CloseDoors" operation="_8mDdEIfsEe6u9b2Nf5PmMg"/>
+      </packagedElement>
     </packagedElement>
-    <packagedElement xmi:type="uml:Component" xmi:id="_eH4X8InwEe6edOyxPj4Nzw" name="LeftCam">
+    <packagedElement xmi:type="uml:Component" xmi:id="_eH4X8InwEe6edOyxPj4Nzw" name="LeftCam" classifierBehavior="_IwBl4IsqEe6275qYVrx81g">
       <ownedAttribute xmi:type="uml:Port" xmi:id="_gdHxAInwEe6edOyxPj4Nzw" name="OUTLCAM" aggregation="composite"/>
       <ownedAttribute xmi:type="uml:Port" xmi:id="_rvQzoInwEe6edOyxPj4Nzw" name="INLCAM" aggregation="composite"/>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_VBVDUIoVEe6qa9hkUu_kqA" client="_eH4X8InwEe6edOyxPj4Nzw _rvQzoInwEe6edOyxPj4Nzw" supplier="_1rqzkIoKEe6qa9hkUu_kqA" contract="_1rqzkIoKEe6qa9hkUu_kqA"/>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_IwBl4IsqEe6275qYVrx81g" name="LeftCamStateMachine">
+        <region xmi:type="uml:Region" xmi:id="_JzUO4IsqEe6275qYVrx81g" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_WeGfcIsqEe6275qYVrx81g" source="_PSLEQIsqEe6275qYVrx81g" target="_RZcSwIsqEe6275qYVrx81g">
+            <effect xmi:type="uml:Activity" xmi:id="_YhtggIsrEe6275qYVrx81g" name="wagonDetected" visibility="public" node="_nKaPQIsrEe6275qYVrx81g _4pwbAIsrEe6275qYVrx81g _9LncoIsrEe6275qYVrx81g">
+              <edge xmi:type="uml:ControlFlow" xmi:id="_KDBz8IssEe6275qYVrx81g" target="_9LncoIsrEe6275qYVrx81g" source="_nKaPQIsrEe6275qYVrx81g"/>
+              <edge xmi:type="uml:ControlFlow" xmi:id="_Li65YIssEe6275qYVrx81g" target="_4pwbAIsrEe6275qYVrx81g" source="_9LncoIsrEe6275qYVrx81g"/>
+              <node xmi:type="uml:InitialNode" xmi:id="_nKaPQIsrEe6275qYVrx81g" name="InitialNode1" outgoing="_KDBz8IssEe6275qYVrx81g"/>
+              <node xmi:type="uml:ActivityFinalNode" xmi:id="_4pwbAIsrEe6275qYVrx81g" name="ActivityFinalNode2" incoming="_Li65YIssEe6275qYVrx81g"/>
+              <node xmi:type="uml:CallOperationAction" xmi:id="_9LncoIsrEe6275qYVrx81g" name="CallOperationAction3" incoming="_KDBz8IssEe6275qYVrx81g" outgoing="_Li65YIssEe6275qYVrx81g" onPort="_gdHxAInwEe6edOyxPj4Nzw" operation="_0FRxoIoXEe6qa9hkUu_kqA">
+                <target xmi:type="uml:InputPin" xmi:id="_BDg7QIssEe6275qYVrx81g" name="target">
+                  <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BDg7QYssEe6275qYVrx81g" value="1"/>
+                  <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BDg7QossEe6275qYVrx81g" value="1"/>
+                </target>
+              </node>
+            </effect>
+            <trigger xmi:type="uml:Trigger" xmi:id="_13lDwIsqEe6275qYVrx81g" name="WagonDetected" event="_l4XUwIt8Ee65455vmAZHMw" port="_rvQzoInwEe6edOyxPj4Nzw"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_bXkd4IssEe6275qYVrx81g" source="_RZcSwIsqEe6275qYVrx81g" target="_PSLEQIsqEe6275qYVrx81g">
+            <effect xmi:type="uml:Activity" xmi:id="_ldou8IssEe6275qYVrx81g" name="noWagonDetected" node="_sHI9EIstEe6275qYVrx81g _tWtukIstEe6275qYVrx81g _u7LK8IstEe6275qYVrx81g">
+              <edge xmi:type="uml:ControlFlow" xmi:id="_xZSzMIstEe6275qYVrx81g" target="_tWtukIstEe6275qYVrx81g" source="_sHI9EIstEe6275qYVrx81g"/>
+              <edge xmi:type="uml:ControlFlow" xmi:id="_yQzC8IstEe6275qYVrx81g" target="_u7LK8IstEe6275qYVrx81g" source="_tWtukIstEe6275qYVrx81g"/>
+              <node xmi:type="uml:InitialNode" xmi:id="_sHI9EIstEe6275qYVrx81g" name="InitialNode1" outgoing="_xZSzMIstEe6275qYVrx81g"/>
+              <node xmi:type="uml:CallOperationAction" xmi:id="_tWtukIstEe6275qYVrx81g" name="CallOperationAction2" incoming="_xZSzMIstEe6275qYVrx81g" outgoing="_yQzC8IstEe6275qYVrx81g" onPort="_gdHxAInwEe6edOyxPj4Nzw" operation="_1rSGIIoXEe6qa9hkUu_kqA">
+                <target xmi:type="uml:InputPin" xmi:id="_uT2sQIstEe6275qYVrx81g" name="target" ordering="LIFO">
+                  <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uT2sQYstEe6275qYVrx81g" value="1"/>
+                  <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uT2sQostEe6275qYVrx81g" value="1"/>
+                </target>
+              </node>
+              <node xmi:type="uml:ActivityFinalNode" xmi:id="_u7LK8IstEe6275qYVrx81g" name="ActivityFinalNode3" incoming="_yQzC8IstEe6275qYVrx81g"/>
+            </effect>
+            <trigger xmi:type="uml:Trigger" xmi:id="_ikKAYIssEe6275qYVrx81g" name="notrainWagonDetected" event="_9WMRIIt8Ee65455vmAZHMw" port="_rvQzoInwEe6edOyxPj4Nzw"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_31ZT8IstEe6275qYVrx81g" kind="local" source="_RZcSwIsqEe6275qYVrx81g" target="_1hNq0IstEe6275qYVrx81g">
+            <effect xmi:type="uml:Activity" xmi:id="_VPcXIIsuEe6275qYVrx81g" name="WagonStopped" node="_iT9WUIsuEe6275qYVrx81g _eIbUkIsvEe6275qYVrx81g _gvp1gIsvEe6275qYVrx81g">
+              <edge xmi:type="uml:ControlFlow" xmi:id="_i00LMIsvEe6275qYVrx81g" target="_eIbUkIsvEe6275qYVrx81g" source="_iT9WUIsuEe6275qYVrx81g"/>
+              <edge xmi:type="uml:ControlFlow" xmi:id="_jZUmcIsvEe6275qYVrx81g" target="_gvp1gIsvEe6275qYVrx81g" source="_eIbUkIsvEe6275qYVrx81g"/>
+              <node xmi:type="uml:InitialNode" xmi:id="_iT9WUIsuEe6275qYVrx81g" name="InitialNode1" outgoing="_i00LMIsvEe6275qYVrx81g"/>
+              <node xmi:type="uml:CallOperationAction" xmi:id="_eIbUkIsvEe6275qYVrx81g" name="CallOperationAction2" incoming="_i00LMIsvEe6275qYVrx81g" outgoing="_jZUmcIsvEe6275qYVrx81g" onPort="_gdHxAInwEe6edOyxPj4Nzw" operation="_3wbNsIoXEe6qa9hkUu_kqA">
+                <target xmi:type="uml:InputPin" xmi:id="_fgsvEIsvEe6275qYVrx81g" name="target">
+                  <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fgsvEYsvEe6275qYVrx81g" value="1"/>
+                  <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fgsvEosvEe6275qYVrx81g" value="1"/>
+                </target>
+              </node>
+              <node xmi:type="uml:ActivityFinalNode" xmi:id="_gvp1gIsvEe6275qYVrx81g" name="ActivityFinalNode3" incoming="_jZUmcIsvEe6275qYVrx81g"/>
+            </effect>
+            <trigger xmi:type="uml:Trigger" xmi:id="_OHy_AIsuEe6275qYVrx81g" name="trainWagonStopped" event="_DRwQoIt9Ee65455vmAZHMw" port="_rvQzoInwEe6edOyxPj4Nzw"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_9Bj20IstEe6275qYVrx81g" source="_1hNq0IstEe6275qYVrx81g" target="_RZcSwIsqEe6275qYVrx81g">
+            <effect xmi:type="uml:Activity" xmi:id="_D2jt0IswEe6275qYVrx81g" name="noWagonStopped" node="_jkYKcIswEe6275qYVrx81g _kXEysIswEe6275qYVrx81g _ookdEIswEe6275qYVrx81g">
+              <edge xmi:type="uml:ControlFlow" xmi:id="_qRs-EIswEe6275qYVrx81g" target="_kXEysIswEe6275qYVrx81g" source="_jkYKcIswEe6275qYVrx81g"/>
+              <edge xmi:type="uml:ControlFlow" xmi:id="_q6rCkIswEe6275qYVrx81g" target="_ookdEIswEe6275qYVrx81g" source="_kXEysIswEe6275qYVrx81g"/>
+              <node xmi:type="uml:InitialNode" xmi:id="_jkYKcIswEe6275qYVrx81g" name="InitialNode1" outgoing="_qRs-EIswEe6275qYVrx81g"/>
+              <node xmi:type="uml:CallOperationAction" xmi:id="_kXEysIswEe6275qYVrx81g" name="CallOperationAction2" incoming="_qRs-EIswEe6275qYVrx81g" outgoing="_q6rCkIswEe6275qYVrx81g" onPort="_gdHxAInwEe6edOyxPj4Nzw" operation="_P2BbYIsuEe6275qYVrx81g">
+                <target xmi:type="uml:InputPin" xmi:id="_lkzKEIswEe6275qYVrx81g" name="target">
+                  <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lkzKEYswEe6275qYVrx81g" value="1"/>
+                  <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lkzKEoswEe6275qYVrx81g" value="1"/>
+                </target>
+              </node>
+              <node xmi:type="uml:ActivityFinalNode" xmi:id="_ookdEIswEe6275qYVrx81g" name="ActivityFinalNode3" incoming="_q6rCkIswEe6275qYVrx81g"/>
+            </effect>
+            <trigger xmi:type="uml:Trigger" xmi:id="_CN0OYIswEe6275qYVrx81g" name="notrainWagonStopped" event="_KB3SgIt9Ee65455vmAZHMw"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_e8DKQIt5Ee6275qYVrx81g" source="_1hNq0IstEe6275qYVrx81g" target="_bYIXkIt5Ee6275qYVrx81g">
+            <effect xmi:type="uml:Activity" xmi:id="_UdZkoIt6Ee6275qYVrx81g" name="leftWagonIdentified" node="_ZkOUgIt6Ee6275qYVrx81g _aWF2UIt6Ee6275qYVrx81g _d1brAIt6Ee6275qYVrx81g">
+              <edge xmi:type="uml:ControlFlow" xmi:id="_einhIIt6Ee6275qYVrx81g" target="_aWF2UIt6Ee6275qYVrx81g" source="_ZkOUgIt6Ee6275qYVrx81g"/>
+              <edge xmi:type="uml:ControlFlow" xmi:id="_fEzoMIt6Ee6275qYVrx81g" target="_d1brAIt6Ee6275qYVrx81g" source="_aWF2UIt6Ee6275qYVrx81g"/>
+              <node xmi:type="uml:InitialNode" xmi:id="_ZkOUgIt6Ee6275qYVrx81g" name="InitialNode1" outgoing="_einhIIt6Ee6275qYVrx81g"/>
+              <node xmi:type="uml:CallOperationAction" xmi:id="_aWF2UIt6Ee6275qYVrx81g" name="CallOperationAction2" incoming="_einhIIt6Ee6275qYVrx81g" outgoing="_fEzoMIt6Ee6275qYVrx81g" onPort="_gdHxAInwEe6edOyxPj4Nzw" operation="_1NlFMIoREe6qa9hkUu_kqA">
+                <target xmi:type="uml:InputPin" xmi:id="_b17RYIt6Ee6275qYVrx81g" name="target">
+                  <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_b17RYYt6Ee6275qYVrx81g" value="1"/>
+                  <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_b17RYot6Ee6275qYVrx81g" value="1"/>
+                </target>
+              </node>
+              <node xmi:type="uml:ActivityFinalNode" xmi:id="_d1brAIt6Ee6275qYVrx81g" name="ActivityFinalNode3" incoming="_fEzoMIt6Ee6275qYVrx81g"/>
+            </effect>
+            <trigger xmi:type="uml:Trigger" xmi:id="_G42agIt6Ee6275qYVrx81g" name="leftWagonDetected" event="_ngbpUIt9Ee65455vmAZHMw"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_fjiBAIt5Ee6275qYVrx81g" source="_bYIXkIt5Ee6275qYVrx81g" target="_1hNq0IstEe6275qYVrx81g">
+            <effect xmi:type="uml:Activity" xmi:id="_qyRU4It6Ee6275qYVrx81g" name="noLeftWagonIdentified" node="_9GFqgIt6Ee6275qYVrx81g _9qoiAIt6Ee6275qYVrx81g _-ppvAIt6Ee6275qYVrx81g">
+              <edge xmi:type="uml:ControlFlow" xmi:id="_CVRsMIt7Ee6275qYVrx81g" target="_-ppvAIt6Ee6275qYVrx81g" source="_9GFqgIt6Ee6275qYVrx81g"/>
+              <edge xmi:type="uml:ControlFlow" xmi:id="_C0h0AIt7Ee6275qYVrx81g" target="_9qoiAIt6Ee6275qYVrx81g" source="_-ppvAIt6Ee6275qYVrx81g"/>
+              <node xmi:type="uml:InitialNode" xmi:id="_9GFqgIt6Ee6275qYVrx81g" name="InitialNode1" outgoing="_CVRsMIt7Ee6275qYVrx81g"/>
+              <node xmi:type="uml:ActivityFinalNode" xmi:id="_9qoiAIt6Ee6275qYVrx81g" name="ActivityFinalNode2" incoming="_C0h0AIt7Ee6275qYVrx81g"/>
+              <node xmi:type="uml:CallOperationAction" xmi:id="_-ppvAIt6Ee6275qYVrx81g" name="CallOperationAction3" incoming="_CVRsMIt7Ee6275qYVrx81g" outgoing="_C0h0AIt7Ee6275qYVrx81g" onPort="_gdHxAInwEe6edOyxPj4Nzw" operation="_CP02sIoWEe6qa9hkUu_kqA">
+                <target xmi:type="uml:InputPin" xmi:id="_AbQPgIt7Ee6275qYVrx81g" name="target">
+                  <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AbQPgYt7Ee6275qYVrx81g" value="1"/>
+                  <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AbQPgot7Ee6275qYVrx81g" value="1"/>
+                </target>
+              </node>
+            </effect>
+            <trigger xmi:type="uml:Trigger" xmi:id="_mKnNQIt6Ee6275qYVrx81g" name="noLeftWagonDetected" event="_tgHT0It9Ee65455vmAZHMw" port="_gdHxAInwEe6edOyxPj4Nzw"/>
+          </transition>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_PSLEQIsqEe6275qYVrx81g" name="Initial1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_RZcSwIsqEe6275qYVrx81g" name="State2"/>
+          <subvertex xmi:type="uml:State" xmi:id="_1hNq0IstEe6275qYVrx81g" name="State5"/>
+          <subvertex xmi:type="uml:State" xmi:id="_bYIXkIt5Ee6275qYVrx81g" name="State8"/>
+        </region>
+      </ownedBehavior>
       <packagedElement xmi:type="uml:Usage" xmi:id="_UguJEInzEe6edOyxPj4Nzw" client="_eH4X8InwEe6edOyxPj4Nzw _gdHxAInwEe6edOyxPj4Nzw" supplier="_Ukm2EImcEe6hX4xFo692zw"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_dLJtAIt8Ee65455vmAZHMw" name="callEvents">
+        <packagedElement xmi:type="uml:CallEvent" xmi:id="_l4XUwIt8Ee65455vmAZHMw" name="trainWagonDetected" operation="_0FRxoIoXEe6qa9hkUu_kqA"/>
+        <packagedElement xmi:type="uml:CallEvent" xmi:id="_9WMRIIt8Ee65455vmAZHMw" name="notrainWagonDetected" operation="_1rSGIIoXEe6qa9hkUu_kqA"/>
+        <packagedElement xmi:type="uml:CallEvent" xmi:id="_DRwQoIt9Ee65455vmAZHMw" name="trainWagonStopped" operation="_3wbNsIoXEe6qa9hkUu_kqA"/>
+        <packagedElement xmi:type="uml:CallEvent" xmi:id="_KB3SgIt9Ee65455vmAZHMw" name="notrainWagonStopped" operation="_P2BbYIsuEe6275qYVrx81g"/>
+        <packagedElement xmi:type="uml:CallEvent" xmi:id="_ngbpUIt9Ee65455vmAZHMw" name="lefttrainWagonIdentified" operation="_1NlFMIoREe6qa9hkUu_kqA"/>
+        <packagedElement xmi:type="uml:CallEvent" xmi:id="_tgHT0It9Ee65455vmAZHMw" name="noLeftWagonIdentified" operation="_CP02sIoWEe6qa9hkUu_kqA"/>
+      </packagedElement>
     </packagedElement>
-    <packagedElement xmi:type="uml:Component" xmi:id="_0qDScInyEe6edOyxPj4Nzw" name="RightCam">
+    <packagedElement xmi:type="uml:Component" xmi:id="_0qDScInyEe6edOyxPj4Nzw" name="RightCam" classifierBehavior="_juZhwIszEe6275qYVrx81g">
       <ownedAttribute xmi:type="uml:Port" xmi:id="_V6_usInzEe6edOyxPj4Nzw" name="OUTRCAM" aggregation="composite"/>
       <ownedAttribute xmi:type="uml:Port" xmi:id="_XzW-gInzEe6edOyxPj4Nzw" name="INRCAM" aggregation="composite"/>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_lfeQwIoVEe6qa9hkUu_kqA" client="_0qDScInyEe6edOyxPj4Nzw _XzW-gInzEe6edOyxPj4Nzw" supplier="_edxvoIoVEe6qa9hkUu_kqA" contract="_edxvoIoVEe6qa9hkUu_kqA"/>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_juZhwIszEe6275qYVrx81g" name="RightCamStateMachine">
+        <region xmi:type="uml:Region" xmi:id="_k_vN0IszEe6275qYVrx81g" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_M51QEIt7Ee6275qYVrx81g" source="_I4KKYIt7Ee6275qYVrx81g" target="_JXwQcIt7Ee6275qYVrx81g">
+            <trigger xmi:type="uml:Trigger" xmi:id="_YdxNUIt7Ee6275qYVrx81g" name="WagonDetected" event="_vdXxEIuFEe65455vmAZHMw" port="_XzW-gInzEe6edOyxPj4Nzw"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_NwADEIt7Ee6275qYVrx81g" source="_JXwQcIt7Ee6275qYVrx81g" target="_I4KKYIt7Ee6275qYVrx81g">
+            <trigger xmi:type="uml:Trigger" xmi:id="_eHf18It7Ee6275qYVrx81g" name="notrainWagonDetected" event="_0n-0wIuFEe65455vmAZHMw" port="_XzW-gInzEe6edOyxPj4Nzw"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_Pi15sIt7Ee6275qYVrx81g" source="_JXwQcIt7Ee6275qYVrx81g" target="_KFv-4It7Ee6275qYVrx81g">
+            <trigger xmi:type="uml:Trigger" xmi:id="_iYRHkIt7Ee6275qYVrx81g" name="WagonStopped" event="_SQTE0IuDEe65455vmAZHMw" port="_XzW-gInzEe6edOyxPj4Nzw"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_QAbNkIt7Ee6275qYVrx81g" source="_KFv-4It7Ee6275qYVrx81g" target="_JXwQcIt7Ee6275qYVrx81g">
+            <trigger xmi:type="uml:Trigger" xmi:id="_WuYHwIuFEe65455vmAZHMw" name="notrainWagonStopped" event="_FwUrMIuFEe65455vmAZHMw" port="_XzW-gInzEe6edOyxPj4Nzw"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_Qm-QMIt7Ee6275qYVrx81g" source="_KFv-4It7Ee6275qYVrx81g" target="_KvyaYIt7Ee6275qYVrx81g">
+            <trigger xmi:type="uml:Trigger" xmi:id="_RbjncIt-Ee65455vmAZHMw" name="rightWagonIdentified" event="_RUNCQIt-Ee65455vmAZHMw"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_RKM5EIt7Ee6275qYVrx81g" source="_KvyaYIt7Ee6275qYVrx81g" target="_KFv-4It7Ee6275qYVrx81g">
+            <trigger xmi:type="uml:Trigger" xmi:id="_rDIaYIuFEe65455vmAZHMw" name="noRightWagonIdentified" event="_5UKUMIt-Ee65455vmAZHMw"/>
+          </transition>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_I4KKYIt7Ee6275qYVrx81g" name="Initial1"/>
+          <subvertex xmi:type="uml:State" xmi:id="_JXwQcIt7Ee6275qYVrx81g" name="State2"/>
+          <subvertex xmi:type="uml:State" xmi:id="_KFv-4It7Ee6275qYVrx81g" name="State3"/>
+          <subvertex xmi:type="uml:State" xmi:id="_KvyaYIt7Ee6275qYVrx81g" name="State4"/>
+        </region>
+      </ownedBehavior>
       <packagedElement xmi:type="uml:Usage" xmi:id="_2KrTgIn5Ee6355pFSNnm9A" client="_0qDScInyEe6edOyxPj4Nzw _V6_usInzEe6edOyxPj4Nzw" supplier="_nQOr0IfoEe6u9b2Nf5PmMg"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_xrxb8It9Ee65455vmAZHMw" name="callEvent">
+        <packagedElement xmi:type="uml:CallEvent" xmi:id="_RUNCQIt-Ee65455vmAZHMw" name="rightWagonIdentified" operation="_ENmK8IoWEe6qa9hkUu_kqA"/>
+        <packagedElement xmi:type="uml:CallEvent" xmi:id="_5UKUMIt-Ee65455vmAZHMw" name="noRightWagonIdentified" operation="_FshnEIoWEe6qa9hkUu_kqA"/>
+        <packagedElement xmi:type="uml:CallEvent" xmi:id="_SQTE0IuDEe65455vmAZHMw" name="wagonStopped" operation="_3wbNsIoXEe6qa9hkUu_kqA"/>
+        <packagedElement xmi:type="uml:CallEvent" xmi:id="_FwUrMIuFEe65455vmAZHMw" name="notrainWagonstopped" operation="_P2BbYIsuEe6275qYVrx81g"/>
+        <packagedElement xmi:type="uml:CallEvent" xmi:id="_vdXxEIuFEe65455vmAZHMw" name="trainWagonDetected" operation="_0FRxoIoXEe6qa9hkUu_kqA"/>
+        <packagedElement xmi:type="uml:CallEvent" xmi:id="_0n-0wIuFEe65455vmAZHMw" name="notrainWagonDetected" operation="_1rSGIIoXEe6qa9hkUu_kqA"/>
+      </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Component" xmi:id="_35pIAIn_Ee6355pFSNnm9A" name="CenterCam">
       <ownedAttribute xmi:type="uml:Port" xmi:id="_6cdDAIn_Ee6355pFSNnm9A" name="OUTCCAM" aggregation="composite"/>
@@ -115,6 +328,7 @@
       <ownedOperation xmi:type="uml:Operation" xmi:id="_0FRxoIoXEe6qa9hkUu_kqA" name="trainWagonDetected"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_1rSGIIoXEe6qa9hkUu_kqA" name="noTrainWagonDetected"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_3wbNsIoXEe6qa9hkUu_kqA" name="trainWagonStopped"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_P2BbYIsuEe6275qYVrx81g" name="notrainWagonStopped"/>
     </packagedElement>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_VnidQImdEe6hX4xFo692zw" name="ClassDiagram">
