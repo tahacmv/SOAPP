@@ -1,14 +1,10 @@
-* 1)
-SC = 'capteurSignalRec.SC;
-OP = 'ouvrirPorte.OP;
 
-SOAPP_S = (SC[signalGaucheCam/capteurSignalRec] | SC[signalCentreCam/capteurSignalRec] | SC[signalDroiteCam/capteurSignalRec] 
-          | OP[ouvrirPorteGauche/ouvrirPorte] | OP[ouvrirPorteCentre/ouvrirPorte] | OP[ouvrirPorteDroite/ouvrirPorte])\
-          {signalGaucheCam, signalCentreCam, signalDroiteCam, ouvrirPorteGauche, ouvrirPorteCentre, ouvrirPorteDroite};
+
+*/ Authors : Taha mouatassim 
+*/         : Ayoub kassi
+* 1)
 
 * 2)
-
-* 3)
 * Composants : Caméras, SCC, et PPprotocole
 * Caméra 
 *     IN : CapteurCam
@@ -26,34 +22,43 @@ SOAPP_S = (SC[signalGaucheCam/capteurSignalRec] | SC[signalCentreCam/capteurSign
 *   -- La sortie de la caméra est connectée au SCC (pour envoyer le signal de presence/absence/arret du train)
 *   -- La sortie du SCC est connectée au PPprotocole (pour envoyer le message de detection de train)
 
-Camera = recevoirDonneesCapteurCam.'emettreSignal.Camera;
+* /* Additional components */
 
-SCC = recevoirSignalGaucheCam.recevoirSignalCentreCam.recevoirSignalDroiteCam.'envoyerMessageDetectionTrain.SCC;
+CS = detect.SS;
+SS = 'signal.Wait;
+Wait = valid.CS + error.SS;
 
-PPprotocole = recevoirMessageDetectionTrain.'ouvrirPorteGauche.'ouvrirPorteCentre.'ouvrirPorteDroite.PPprotocole;
+SOAPP = signal.SOAPP';
+SOAPP' = tau.Err + order.SOAPP;
+Err = 'error.SOAPP;
 
-* 4)
+D = order.D';
+D'' = 'valid.D;
+D' = 'action.D'';
+
+set L = {signal, order, valid, error};
+Impl = (CS | SOAPP | D) \ L;
+Spec = detect.'action.Spec;
+
+
+OP = 'ouvrirPorte.OP;
+SC = 'capteurSignalRec.SC;
+
+
+SOAPP_S = (SC[signalGaucheCam/capteurSignalRec] | SC[signalCentreCam/capteurSignalRec] | SC[signalDroiteCam/capteurSignalRec] 
+          | OP[ouvrirPorteGauche/ouvrirPorte] | OP[ouvrirPorteCentre/ouvrirPorte] | OP[ouvrirPorteDroite/ouvrirPorte])\
+          {signalGaucheCam, signalCentreCam, signalDroiteCam, ouvrirPorteGauche, ouvrirPorteCentre, ouvrirPorteDroite};
+
+
 Camera0 = tau.C1;
-C1 = in_recevoirDonneesCapteurCam.C2; 
-C2 = out_emettreSignal.Camera0;
+C1 = in_receiveCameraData.C2; 
+C2 = out_emittSignal.Camera0;
 
-SCC0 = tau.SCC1;
-SCC1 = recevoirSignalGaucheCam.SCC2;
-SCC2 = recevoirSignalCentreCam.SCC3;
-SCC3 = recevoirSignalDroiteCam.SCC4;
-SCC4 = 'envoyerMessageDetectionTrain.SCC0;
 
-PPprotocole0 = tau.P1;
-P1 = in_recevoirMessageDetectionTrain.P2;
-P2 = 'out_ouvrirPorteGauche.P3;
-P3 = 'out_ouvrirPorteCentre.P4;
-P4 = 'out_ouvrirPorteDroite.PPprotocole0;
-
-* 5)
 SOAPP_S0 = tau.SOAPP_S1;
-SOAPP_S1 = signalGaucheCam.SOAPP_S2;
-SOAPP_S2 = signalCentreCam.SOAPP_S3;
-SOAPP_S3 = signalDroiteCam.SOAPP_S4;
-SOAPP_S4 = ouvrirPorteGauche.SOAPP_S0;
-SOAPP_S5 = ouvrirPorteCentre.SOAPP_S0;
-SOAPP_S6 = ouvrirPorteDroite.SOAPP_S0;
+SOAPP_S1 = signalLeftCam.SOAPP_S2;
+SOAPP_S2 = signalCenterCam.SOAPP_S3;
+SOAPP_S3 = signalRightCam.SOAPP_S4;
+SOAPP_S4 = openLeft.SOAPP_S0;
+SOAPP_S5 = openCenter.SOAPP_S0;
+SOAPP_S6 = openRight.SOAPP_S0;
